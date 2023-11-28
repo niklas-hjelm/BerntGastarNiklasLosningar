@@ -11,9 +11,4 @@
     <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Enums\" />
-    <Folder Include="Payment\" />
-  </ItemGroup>
-
 </Project>
