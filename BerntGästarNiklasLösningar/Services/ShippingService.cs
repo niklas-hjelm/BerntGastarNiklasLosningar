@@ -16,13 +16,11 @@ public class ShippingService(ILogger logger) : IShippingService
     };
     public void ShipOrder(IOrder order, ShippingType shippingMethod)
     {
-        if (_shippingStrategies.ContainsKey(shippingMethod))
-        {
-            _shippingStrategies[shippingMethod].ShipOrder(order);
-        }
-        else
+        if (!_shippingStrategies.ContainsKey(shippingMethod))
         {
             logger.Log($"No shipping strategy found for {shippingMethod}");
         }
+
+        _shippingStrategies[shippingMethod].ShipOrder(order);
     }
 }
