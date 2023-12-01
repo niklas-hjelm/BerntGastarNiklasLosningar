@@ -14,6 +14,10 @@ IUser paul = new User("Paul", consoleLogger, chatService);
 IUser george = new User("George", consoleLogger, chatService);
 IUser ringo = new User("Ringo", consoleLogger, chatService);
 
+IUser ringoFan = new User("RingoFan", consoleLogger, chatService);
+
 john.SendMessage("Hello!", "Paul");
 consoleLogger.EmptyLine();
 paul.SendMessage("Hi!", "John");
+consoleLogger.EmptyLine();
+ringoFan.SendMessage("I am your biggest fan!", "Ringo");
