@@ -2,7 +2,7 @@
 
 namespace StorageExercise.StorageContent;
 
-public class VideoContent(string name) : Content(name)
+public class PictureContent(string name) : Content(name)
 {
     
 }

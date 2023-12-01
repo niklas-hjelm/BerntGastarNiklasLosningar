@@ -1,6 +1,7 @@
 ﻿using Common;
 using StorageExercise.StorageContent.Interfaces;
 using StorageExercise.StorageTypes.Abstracts;
+using StorageExercise.StorageTypes.Interfaces;
 
 namespace StorageExercise.StorageTypes;
 

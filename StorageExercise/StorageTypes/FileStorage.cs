@@ -1,10 +1,11 @@
 ﻿using Common;
 using StorageExercise.StorageContent.Interfaces;
 using StorageExercise.StorageTypes.Abstracts;
+using StorageExercise.StorageTypes.Interfaces;
 
 namespace StorageExercise.StorageTypes;
 
-public class DatabaseStorage(ILogger logger, string name) : Storage(logger, name)
+public class FileStorage(ILogger logger, string name) : Storage(logger, name)
 {
     public override void Store(IContent content)
     {

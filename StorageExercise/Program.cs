@@ -7,13 +7,13 @@ using StorageExercise.StorageContent.Interfaces;
 ILogger consoleLogger = new ConsoleLogger();
 
 IStorage cloudStorage = new CloudStorage(consoleLogger, "NiklasDrömmar");
-IStorage databaseStorage = new DatabaseStorage(consoleLogger, "NiklasBakficka");
+IStorage fileStorage = new FileStorage(consoleLogger, "NiklasBakficka");
 
 IContent article = new ArticleContent("Article1");
-IContent video = new VideoContent("Video1");
+IContent video = new PictureContent("Picture1");
 
 cloudStorage.Store(article);
 cloudStorage.Store(video);
 
-databaseStorage.Store(article);
-databaseStorage.Store(video);
+fileStorage.Store(article);
+fileStorage.Store(video);
