@@ -4,8 +4,8 @@ namespace TextEditor.Strategies;
 
 public class ReplaceStrategy : ITextStrategy
 {
-    public string Execute(string input)
+    public string Run(string input)
     {
-        return "Hej";
+        return input.Replace(" ", "");
     }
 }

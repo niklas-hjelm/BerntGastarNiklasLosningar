@@ -1,6 +1,7 @@
-﻿namespace TextEditor.Strategies.Interfaces;
+﻿using Common;
 
-public interface ITextStrategy
+namespace TextEditor.Strategies.Interfaces;
+
+public interface ITextStrategy : IStrategy<string, string>
 {
-    string Execute(string input);
 }

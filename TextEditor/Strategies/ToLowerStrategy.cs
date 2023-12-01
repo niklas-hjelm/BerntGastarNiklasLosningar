@@ -4,7 +4,7 @@ namespace TextEditor.Strategies;
 
 public class ToLowerStrategy : ITextStrategy
 {
-    public string Execute(string input)
+    public string Run(string input)
     {
         return input.ToLower();
     }

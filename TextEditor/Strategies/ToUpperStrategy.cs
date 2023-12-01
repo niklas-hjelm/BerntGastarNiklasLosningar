@@ -4,7 +4,7 @@ namespace TextEditor.Strategies;
 
 public class ToUpperStrategy : ITextStrategy
 {
-    public string Execute(string input)
+    public string Run(string input)
     {
         return input.ToUpper();
     }

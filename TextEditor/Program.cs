@@ -6,8 +6,10 @@ using TextEditor.Services.Interfaces;
 Console.WriteLine("Hello, World!");
 
 ILogger logger = new ConsoleLogger();
-IStrategyService strategyService = new StrategyService(logger);
+ITextStrategyService strategyService = new StrategyService(logger, FormatType.ToUpper);
 
-strategyService.Run(FormatType.ToUpper, "Hello, World!");
-strategyService.Run(FormatType.ToLower, "Hello, World!");
-strategyService.Run(FormatType.Replace, "Hello, World!");
+Console.WriteLine(strategyService.Run("Hello, World!"));
+strategyService.SetStrategy(FormatType.ToLower);
+Console.WriteLine(strategyService.Run("Hello, World!"));
+strategyService.SetStrategy(FormatType.Replace);
+Console.WriteLine(strategyService.Run("Hello, World!"));
