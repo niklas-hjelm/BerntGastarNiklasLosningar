@@ -21,7 +21,8 @@ public class Client : IClient
 
     public void Receive(IMessage message)
     {
-        _logger.Log($"{Address} received a message:\n\t {message.Content} \n\t from: {message.Sender}");
+        _logger.Log($"{Address.Computer} received a message:\n\t {message.Content} \n\t from: {message.Sender.Computer}");
+        _logger.EmptyLine();
     }
 
     public void Send(Address receiver, string message)
