@@ -1,6 +1,6 @@
 ﻿namespace Common;
 
-public interface IStrategyService<T, TU, TUu, TUUu> 
+public interface IStrategyService<in T, out TU, in TUu, in TUUu> 
     where T : IStrategy<TU, TUu> 
     where TUUu : Enum
 {

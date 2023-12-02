@@ -1,12 +1,12 @@
-﻿using Network.Computers.Interfaces;
+﻿using Network.Clients.Interfaces;
+using Network.Messages;
 
 namespace Network.Hubs.Interfaces;
 
-public interface IHub
+public interface IHub<in T>
 {
-    string Name { get; }
-    void Register(IComputer computer);
-    void UnRegister(IComputer computer);
-    void Send(string message, string receiver, string sender);
-    void Broadcast(string message, string sender);
+    Address Address { get; }
+    void Register(T participant);
+    void UnRegister(T participant);
+    void Receive(IMessage message);
 }
