@@ -1,4 +1,5 @@
 ﻿using Common;
+using Common.HubCommunications;
 using Network.Hubs.Interfaces;
 using Network.Messages;
 

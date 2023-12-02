@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using Common;
+using Common.HubCommunications;
 using Network;
 using Network.Clients;
 using Network.Hubs;

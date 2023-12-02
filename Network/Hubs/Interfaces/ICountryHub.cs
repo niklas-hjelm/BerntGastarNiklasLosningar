@@ -1,4 +1,4 @@
-﻿using Common;
+﻿using Common.HubCommunications;
 
 namespace Network.Hubs.Interfaces;
 

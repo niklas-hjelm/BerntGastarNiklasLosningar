@@ -1,4 +1,4 @@
-﻿using Common;
+﻿using Common.Strategy;
 using TextEditor.Enums;
 using TextEditor.Strategies.Interfaces;
 

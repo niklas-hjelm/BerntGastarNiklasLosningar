@@ -1,4 +1,4 @@
-﻿namespace Common;
+﻿namespace Common.HubCommunications;
 
 public interface IClient
 {

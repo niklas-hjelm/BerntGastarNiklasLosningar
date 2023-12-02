@@ -1,4 +1,4 @@
-﻿using Common;
+﻿using Common.Strategy;
 
 namespace TextEditor.Strategies.Interfaces;
 
