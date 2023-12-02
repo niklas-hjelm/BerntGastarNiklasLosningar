@@ -3,7 +3,6 @@
 using Common;
 using Network;
 using Network.Clients;
-using Network.Clients.Interfaces;
 using Network.Hubs;
 using Network.Hubs.Interfaces;
 using Network.Messages;

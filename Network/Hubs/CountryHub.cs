@@ -1,15 +1,16 @@
-﻿using Network.Hubs.Interfaces;
+﻿using Common;
+using Network.Hubs.Interfaces;
 using Network.Messages;
 
 namespace Network.Hubs;
 
 public class CountryHub : ICountryHub
 {
-    public Address Address { get; }
+    public IAddress Address { get; }
     private readonly IInternet _internet;
-    private readonly Dictionary<Address,ILocalHub> _localHubs = new();
+    private readonly Dictionary<IAddress,ILocalHub> _localHubs = new();
 
-    public CountryHub(Address address, IInternet internet)
+    public CountryHub(IAddress address, IInternet internet)
     {
         Address = address;
         _internet = internet;

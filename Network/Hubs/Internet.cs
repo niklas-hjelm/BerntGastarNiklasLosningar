@@ -6,11 +6,11 @@ namespace Network.Hubs;
 
 public class Internet : IInternet
 {
-    public Address Address { get; }
-    private readonly Dictionary<Address, ICountryHub> _countryHubs = new();
+    public IAddress Address { get; }
+    private readonly Dictionary<IAddress, ICountryHub> _countryHubs = new();
     private ILogger _logger;
 
-    public Internet(Address address, ILogger logger)
+    public Internet(IAddress address, ILogger logger)
     {
         Address = address;
         _logger = logger;

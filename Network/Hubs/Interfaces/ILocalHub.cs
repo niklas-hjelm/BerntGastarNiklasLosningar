@@ -1,4 +1,4 @@
-﻿using Network.Clients.Interfaces;
+﻿using Common;
 
 namespace Network.Hubs.Interfaces;
 

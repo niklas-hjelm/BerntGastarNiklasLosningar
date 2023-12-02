@@ -1,3 +1,5 @@
-﻿namespace Network;
+﻿using Common;
 
-public record Address(string Country, string Region, string Computer);
+namespace Network;
+
+public record Address(string Country, string Region, string Computer) : IAddress;

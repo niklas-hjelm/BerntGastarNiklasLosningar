@@ -1,4 +1,6 @@
-﻿namespace Network.Hubs.Interfaces;
+﻿using Common;
+
+namespace Network.Hubs.Interfaces;
 
 public interface IInternet : IHub<ICountryHub>
 {
