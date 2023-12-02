@@ -28,11 +28,11 @@ public class LocalHub : ILocalHub
         _clients.Remove(participant.Address);
     }
 
-    public void Receive(IMessage message)
+    public void Broadcast(IMessage message)
     {
         if(_clients.TryGetValue(message.Receiver, out var client))
             client.Receive(message);
         else 
-            _countryHub.Receive(message);
+            _countryHub.Broadcast(message);
     }
 }

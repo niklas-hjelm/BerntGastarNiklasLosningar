@@ -25,12 +25,12 @@ public class Internet : IInternet
         _countryHubs.Remove(participant.Address);
     }
 
-    public void Receive(IMessage message)
+    public void Broadcast(IMessage message)
     {
         var countryHub = 
             _countryHubs.FirstOrDefault(v => v.Key.Country == message.Receiver.Country);
         if (countryHub.Value != null)
-            countryHub.Value?.Receive(message);
+            countryHub.Value?.Broadcast(message);
         else
             _logger.Log($"Message {message} was not delivered");
     }

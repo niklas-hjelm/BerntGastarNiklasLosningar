@@ -8,5 +8,5 @@ public interface IHub<in T>
     Address Address { get; }
     void Register(T participant);
     void UnRegister(T participant);
-    void Receive(IMessage message);
+    void Broadcast(IMessage message);
 }

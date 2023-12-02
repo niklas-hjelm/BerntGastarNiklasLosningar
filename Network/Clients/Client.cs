@@ -26,6 +26,6 @@ public class Client : IClient
 
     public void Send(Address receiver, string message)
     {
-        _hub.Receive(new Message(Address, receiver, message));
+        _hub.Broadcast(new Message(Address, receiver, message));
     }
 }

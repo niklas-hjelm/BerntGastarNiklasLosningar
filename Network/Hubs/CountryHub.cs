@@ -25,13 +25,13 @@ public class CountryHub : ICountryHub
         _localHubs.Remove(participant.Address);
     }
 
-    public void Receive(IMessage message)
+    public void Broadcast(IMessage message)
     {
         var localHub = 
             _localHubs.FirstOrDefault(v => v.Key.Region == message.Receiver.Region);
         if (localHub.Value != null)
-            localHub.Value?.Receive(message);
+            localHub.Value?.Broadcast(message);
         else
-            _internet.Receive(message);
+            _internet.Broadcast(message);
     }
 }
